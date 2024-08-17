@@ -1,0 +1,327 @@
+/* ================= Import Google Fonts ================== */
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100..900&family=Raleway:wght@100..900&display=swap');
+
+
+/* ====================== Reset Defalut CSS ================ */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+:root {
+  --primary-font: "Jost", sans-serif;
+  --secondary-font: "Raleway", sans-serif;
+  --primary-color: #8d23da;
+  --light-color: #fff;
+}
+
+
+/* ======================= REGISTER ==================== */
+.form_container {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e5e5e5;
+}
+
+.form_container form {
+  padding: 3rem 2rem;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: #fff;
+}
+
+.input_box {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0;
+}
+
+form label {
+  font-size: 2rem;
+  font-family: var(--primary-font);
+  color: #111;
+  font-weight: 400;
+}
+
+form input,
+select {
+  padding: 10px;
+  outline: none;
+  font-family: var(--primary-font);
+  font-size: 1.7rem;
+  border-radius: 3px;
+  border: 1.5px solid #e5e5e5;
+  transition: all .4s ease-in-out;
+}
+
+form input:is(:focus, :active) {
+  border-color: var(--primary-color);
+}
+
+.form_container button {
+  background-color: #8d23da;
+  width: 100%;
+  padding: 1rem 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: var(--light-color);
+  font-size: 1.65rem;
+  letter-spacing: 1.1px;
+  font-family: var(--secondary-font);
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+.form_heading h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #222;
+  font-family: var(--secondary-font);
+  font-weight: 700;
+}
+
+.form_heading p {
+  color: #333;
+  font-family: var(--primary-font);
+  font-size: 1.8rem;
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 3rem;
+}
+
+.form_icon {
+  font-size: 2.2rem;
+}
+
+.toast {
+  font-family: var(--primary-font);
+}
+
+.loading_icon {
+  animation: loading 2s infinite;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.disable_btn {
+  pointer-events: none;
+  opacity: .7;
+}
+
+.form_footer {
+  text-align: center;
+  margin-top: 1rem;
+  font-family: var(--primary-font);
+  font-size: 1.7rem;
+  font-weight: 400;
+}
+
+.form_footer a {
+  color: var(--primary-color);
+}
+
+
+.header {
+  padding: 1rem 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  height: 80px;
+}
+
+.logo {
+  font-size: 2.5rem;
+  font-family: var(--primary-font);
+  font-weight: 600;
+  color: #111;
+
+}
+
+.logo span {
+  color: var(--primary-color);
+  font-family: var(--secondary-font);
+}
+
+.header .buttons {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.header .buttons button {
+  padding: 1rem 2rem;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1.8rem;
+  outline: none;
+  border: none;
+  font-family: var(--primary-font);
+
+}
+
+.header .buttons button:nth-child(1) {
+  background-color: #333;
+  color: var(--light-color);
+}
+
+.header .buttons button:nth-child(2) {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+}
+
+.tasks_wrapper {
+  min-height: calc(100vh - 80px);
+  padding: 2rem 7rem;
+}
+
+.task_container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.task_card {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  background-color: var(--light-color);
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+}
+
+.task_card h1 {
+  font-family: var(--primary-font);
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+
+.task_card p {
+  font-family: var(--secondary-font);
+  font-size: 1.6rem;
+  color: #333;
+}
+
+.task_card span {
+  font-family: var(--primary-font);
+  font-size: 1.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.pending {
+  color: #d00000;
+}
+
+.completed {
+  color: #09c434;
+}
+
+.task_footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.task_card .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.close_icon {
+  cursor: pointer;
+  font-size: 3rem;
+  background-color: #333;
+  border-radius: 50%;
+  color: var(--light-color);
+  padding: .5rem;
+}
+
+
+.edit_icon {
+  color: #333;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.update_task_container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+
+/* =================== Responsive ================== */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .header {
+    padding: 1rem;
+  }
+
+  .buttons {
+    gap: 1rem;
+  }
+
+  .buttons button {
+    padding: 1rem 1.5rem;
+  }
+
+  .tasks_wrapper {
+    padding: 2rem 1rem;
+  }
+
+  .task_container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .task_container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .task_container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
